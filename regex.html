@@ -1,0 +1,38 @@
+<form>
+<input type="text" pattern="[0-9]{3}\s[0-9]{8}|[0-9]{11}|[234]{3}\s[0-9]{10}|[+234]{4}\s[0-9]{10}|[+234]{4}[0-9]{10}|[234]{3}[0-9]{10}" 
+required autofocus />
+<input type="submit">
+</form>
+
+<p>
+Tested Number Formats
+</p>
+<p>p = passed</p>
+<ol>
+<li>+234 8075720373 p</li>
+<li>+2348075720373  p</li> 
+<li>234 8075720373  p</li>
+<li>2348075720373   p</li>
+<li>08075720373     p</li>
+<li>080 75720373    p</li>	
+</ol>
+
+<h3>The reg ex code</h3>
+<p>[0-9]{3}\s[0-9]{8}|[0-9]{11}|[234]{3}\s[0-9]{10}|[+234]{4}\s[0-9]{10}|[+234]{4}[0-9]{10}|[234]{3}[0-9]{10}</p>
+
+<h3>How to use</h3>
+<p>Copy and Paste the reg ex code into the pattern attribute of your HTML5 text input tag</p>
+
+<h3>What's the use</h3>
+<p>Client side validation for Nigerian phone numbers therefore sever side validation becomes a fallback option</p>
+
+<h3>The Discovery</h3>
+<p>On going through a database containing over 20k Nigerian phone numbers, I discovered that the above "Test Number Formats" were the most common ways phone numbers were inputed. I also discovered that even after showing users an accepted input format,formating code was usually buggy and they could accept other formats as well. In many cases, users didn't know to add a "+" before starting with country code.
+ </p>
+<h3>The Phyilosophy</h3>
+ Since there is really no standard way of writing Nigerian phone numbers, It would be nice if our forms accepted most of the ways Nigerians wrote their numbers especially when an app is used by only people with Nigerian numbers.
+ <p>
+<h3>Licence</h3>
+<p>MIT</p>
+
+ 
